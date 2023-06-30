@@ -36,13 +36,6 @@ const Users = () => {
         {
         filtredUsers.map(user => {
             return (
-              // <Link 
-              //   className={styles.routerLink} 
-              //   to='/user_info'
-              //   onClick={() => {
-              //     localStorage.setItem('userId',user.id-1)
-              //   }}
-              //   >
 
                 <div className={styles.card}>
 
@@ -68,7 +61,6 @@ const Users = () => {
                   </Link>
 
                 </div>
-              // </Link>
             );
           })
         }
