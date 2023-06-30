@@ -18,7 +18,7 @@ const Users = () => {
   const [value, setValue] = useState('')
 
   const filtredUsers = usersJson.filter(usersJson => {
-    return usersJson.name.toLowerCase().includes(value.toLowerCase())
+    return usersJson.username.toLowerCase().includes(value.toLowerCase())
   })
 
   return (
