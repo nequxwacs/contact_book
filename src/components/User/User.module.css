@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 20px 10px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba( 0, 0, 0, 0.20);
+}
+
+.container__arrow {
+    width: 40px;
+}.container__arrow > img {
+    width: 100%;
+}

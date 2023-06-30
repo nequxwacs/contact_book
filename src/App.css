@@ -1,11 +1,35 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Mont';
+    font-weight: 400;
+    background-color: rgb(245, 245, 245);
 }
 
-.header {
+.main__header {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba( 0, 0, 0, 0.20);
+}
+
+.main__section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+}.section__container {
+    width: 80%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
 }
