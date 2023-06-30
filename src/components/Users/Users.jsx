@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 
 
+
+
 const Users = () => {
   const [users, setUsers] = useState([])
 
@@ -34,28 +36,39 @@ const Users = () => {
         {
         filtredUsers.map(user => {
             return (
-              <div className={styles.card}>
+              // <Link 
+              //   className={styles.routerLink} 
+              //   to='/user_info'
+              //   onClick={() => {
+              //     localStorage.setItem('userId',user.id-1)
+              //   }}
+              //   >
 
-                <div className={styles.container_card}>
+                <div className={styles.card}>
 
-                  <div className={styles.card__user_img}></div>
+                  <div className={styles.container_card}>
 
-                  <div className={styles.card__user_info}>
-                    <p className={styles.user__name}>{ user.name }</p>
-                    <p className={styles.user__phone}>{ user.phone }</p>
+                    <div className={styles.card__user_img}></div>
+
+                    <div className={styles.card__user_info}>
+                      <div className={styles.username_container}>
+                        <p className={styles.user__name}>{ user.username }</p>
+                        <p className={styles.user__city}>{ user.address.city } <p>(city)</p></p>
+                      </div>
+                      <p className={styles.user__phone}>{ user.phone }</p>
+                    </div>
                   </div>
+
+                  <Link to="/edit">
+                    <div className={styles.card__edit} onClick={() => {
+                      localStorage.setItem('userId',user.id-1)
+                    }}>
+                        <img src="./src/assets/icon/edit icon.png" alt="" />
+                    </div>
+                  </Link>
+
                 </div>
-
-                <Link to="/user">
-                  <div className={styles.card__edit} onClick={() => {
-                    localStorage.setItem('userId',user.id-1)
-                    console.log();
-                  }}>
-                      <img src="./src/assets/icon/edit icon.png" alt="" />
-                  </div>
-                </Link>
-
-              </div>
+              // </Link>
             );
           })
         }

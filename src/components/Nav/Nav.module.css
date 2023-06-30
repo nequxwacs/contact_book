@@ -12,3 +12,8 @@
     font-size: 20px;
 }
 
+@media (max-width: 768px) {
+    .container__logo {
+        font-size: 18px;
+    }
+}

@@ -1,3 +1,8 @@
+.routerLink {
+    text-decoration: none;
+    color: #000;
+}
+
 .container__search_input {
 }
 
@@ -52,6 +57,12 @@
     gap: 10px;
 }
 
+.username_container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .card__edit {
     width: 24px;
     height: 26px;
@@ -70,8 +81,120 @@
     font-weight: 600;
     font-size: 18px;
 }
-.user__phone {
+.user__phone,
+.user__city {
+    display: flex;
     font-family: 'Mont';
     font-weight: 400;
     font-size: 14px;
+}
+
+.user__city > p {
+    font-family: 'Mont';
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .container__search_input {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search__input {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+    
+    .card {
+        padding: 20px 30px 20px 20px;
+    }
+    
+    .card__user_img {
+        width: 46px;
+        height: 46px;
+    }
+    
+    .card__edit {
+        width: 22px;
+        height: 24px;
+    }
+    
+    .user__name {
+        font-size: 16px;
+    }
+    .user__phone,
+    .user__city {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .search__input {
+        width: 100%;
+
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .card {
+        border-radius: 8px;
+    }
+    
+    .container__users {
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .username_container {
+        gap: 10px;
+    }
+    .user__city {
+        font-size: 10px;
+    }.user__city > p {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .search__input {
+
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .container_card {
+        gap: 10px;
+    }
+    
+    .container__users {
+        gap: 10px;
+        margin: 20px 0;
+    }
+    
+    .card {
+        border-radius: 8px;
+        padding: 15px 20px 13px 10px;
+    }
+    
+    .card__user_img {
+        width: 46px;
+        height: 46px;
+        border: 3px solid #000;
+    }
+
+    .card__edit {
+        width: 18px;
+        height: 20px; 
+    }
+
+    .user__name {
+        font-size: 14px;
+    }
+
+    .user__city {
+        display: none;
+    }
 }
